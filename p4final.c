@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int input()
 {
   int n;
@@ -12,7 +11,8 @@ int find_fibo(int n)
   int fibo=0;
   int a=0;
   int b=1;
-  for(int i=0;i<n;i++) {
+  for(int i=0;i<n;i++)
+    {
     fibo = a;
     a = b;
     b = fibo + b;
