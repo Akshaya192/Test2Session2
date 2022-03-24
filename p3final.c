@@ -4,22 +4,31 @@ int input_number()
   int a;
   printf("enter a number\n");
   scanf("%d",&a);
-  return 0;
+  return a;
 }
 int is_prime(int n)
 {
-  int n
-  printf()
+  int i,count=0;
+  for(i=1; i<=n; i++)
+    {
+      if (n%i==0)
+        count++;
+    }
+  return 0;
 }
-void output(int n, int prime)
+void output(int n, int is_prime)
 {
-  printf("prime number is : %d\n",n,prime);
+  int count;
+  if (count==2)
+  printf("%d mumber is prime\n",n);
+  else
+    printf("%d number is not prime\n",n);
 }
 int main()
 {
-  int a, n;
-  a=input();
-  n=is_prime(n);
-  output(n,is_prime);
+  int n,a;
+  a=is_prime(n);
+  n=input_number();
+  output(n,a);
   return 0;
 }
