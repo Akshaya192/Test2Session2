@@ -9,9 +9,12 @@ int input()
 }
 void init_array(int n, int a[n])
 {
-  for(int i=0;i<n;i++)
-    a[i] = i;
+  a[0]=0;
   a[1]=0;
+  for(int i=2;i<=n;i++)
+  {
+    a[i] = i;
+  }
 }
 void ets(int n, int a[n])
 {
@@ -26,18 +29,23 @@ void ets(int n, int a[n])
 }
 void display(int n, int a[n])
 {
-  for(int i=0;i<n;i++)
+  for(int i=0;i<n-1;i++)
+    {
     if(a[i]!=0)
       printf("%d ",a[i]);
-  printf("\n");
+    }
+  if(a[n-1])
+    printf("%d\n",a[n-1]);
+  else
+    printf("\n");
 }
 int main()
 {
   int n;
-  n=input();
+  n=input_array_size();
   int a[n];
   init_array(n,a);
-  ets(n,a);
-  display(n,a);
+  erotosthenes_sieve(n,a);
+  output(n,a);
   return 0;
 }

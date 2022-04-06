@@ -13,15 +13,15 @@ int find_fibo(int n)
   int b=1;
   for(int i=0;i<n;i++)
     {
-    fibo = a;
-    a = b;
-    b = fibo + b;
-  }
+      fibo = a;
+      a = b;
+      b = fibo + b;
+    }
   return fibo;
 }
 void output(int n,int fibo)
 {
-  printf("%d\n",fibo);
+  printf("%d:%d\n",n,fibo);
 }
 int main()
 {
