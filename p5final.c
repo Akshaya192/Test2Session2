@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 #include<math.h>
 int input()
 {
@@ -7,14 +7,12 @@ int input()
   scanf("%d",&n);
   return n;
 }
-
 void init_array(int n, int a[n])
 {
   for(int i=0;i<n;i++)
     a[i] = i;
   a[1]=0;
 }
-
 void ets(int n, int a[n])
 {
   int i=0;
@@ -26,8 +24,6 @@ void ets(int n, int a[n])
    i++;
   }
 }
-
-
 void display(int n, int a[n])
 {
   for(int i=0;i<n;i++)
@@ -35,7 +31,6 @@ void display(int n, int a[n])
       printf("%d ",a[i]);
   printf("\n");
 }
-
 int main()
 {
   int n;

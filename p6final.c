@@ -3,43 +3,33 @@
 void input_string(char *a)
 {
   printf("enter the string\n");
-  scanf("%s",a);
+  fgets(a,200,stdin);
 }
-int string_length(char *s)
+int count_words(char *string)
 {
-  int i;
-  for(i=0;s[i]!='\0';i++);
-  return i;
+  int count=0;
+  for(int i=0;string[i]!='\0';i++)
+    {
+     if(string[i]==' ')
+     {
+       count=count+1;
+     }
+    }
+  return count;
+    
 }
-int string_ncmp(char *s1,char *s2)
+
+void output(char *string, int no_words)
 {
-  int n;
-  for(int i=0; i<n && s1[i]==s2[i] && s1[i] != '\0';i++);
-  return s1[i] - s2[i];
-}
-int string_index(char *s, char *subs)
-{
-  int l1=string_lenght(s);
-  int l2=string_lenght(subs);
-  if l1 < l2
-      return -1;
-  for(int i=0;i<l1-l2;i++)
-    if (string_nscmp(s,subs))
-      return i;
-  return -1;
-}
-void output(char *string, char *substring, int index)
-{
-  printf("the index of a substring of a string is : %s",index)
+  
+  printf("number of words %d",no_words+1);
 }
 int main()
 {
-  int i;
+  char a[20];
   input_string(a);
-  i=strig_length(s);
-  s1=string_ncmp();
-  s2=string_ncmp();
-  output(string,substring,index);
+  int no_words;
+  no_words=count_words(a);
+  output(a,no_words);
   return 0;
 }
-/* Understand and debug the functions and write main */
