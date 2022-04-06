@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-void input_line(float *x1, float *y1)
+void input_triangle(float *x1, float *y1)
 {
    printf("enter the values of x,y\n");
   scanf("%f%f",x1,y1);
@@ -26,9 +26,9 @@ void output(float x1, float y1, float x2, float y2,float x3, float y3, int istri
 int main()
 {
   float x1,x2,x3,y1,y2,y3;
-  input_line(&x1,&y1);
-  input_line(&x2,&y2);
-  input_line(&x3,&y3);
+  input_triangle(&x1,&y1);
+  input_triangle(&x2,&y2);
+  input_triangle(&x3,&y3);
   int a=is_triangle(x1,y1,x2,y2,x3,y3);
   output(x1,y1,x2,y2,x3,y3,a);
   return 0;
